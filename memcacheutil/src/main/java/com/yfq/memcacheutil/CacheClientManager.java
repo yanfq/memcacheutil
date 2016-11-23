@@ -1,13 +1,12 @@
-package com.hundsun.u3c.memcacheutil;
-
-import java.util.Map;
-import java.util.concurrent.TimeoutException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.yfq.memcacheutil;
 
 import net.rubyeye.xmemcached.MemcachedClient;
 import net.rubyeye.xmemcached.exception.MemcachedException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
+import java.util.concurrent.TimeoutException;
 
 public class CacheClientManager {
 	private static int EXPIRE_TIME = 0;
@@ -19,16 +18,10 @@ public class CacheClientManager {
 			client.setWithNoReply(key, EXPIRE_TIME, value);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-			log.error("Ìí¼ÓÊý¾Ýkey:"+key+",value:"+value+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+",value:"+value+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
-//		catch (TimeoutException e) {
-//			e.printStackTrace();
-//		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("Ìí¼ÓÊý¾Ýkey:"+key+",value:"+value+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+",value:"+value+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 	}
 	
@@ -39,16 +32,10 @@ public class CacheClientManager {
 			client.setWithNoReply(key, EXPIRE_TIME, value);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-			log.error("Ìí¼ÓÊý¾Ýkey:"+key+",value:"+value+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+",value:"+value+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
-//		catch (TimeoutException e) {
-//			e.printStackTrace();
-//		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("Ìí¼ÓÊý¾Ýkey:"+key+",value:"+value+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+",value:"+value+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 	}
 	
@@ -60,17 +47,13 @@ public class CacheClientManager {
 			retn = client.get(key);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-    		log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+    		log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (TimeoutException e) {
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		return retn;
 	}
@@ -83,17 +66,13 @@ public class CacheClientManager {
 			retn = client.get(key);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-    		log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+    		log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (TimeoutException e) {
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		return retn;
 	}
@@ -106,17 +85,13 @@ public class CacheClientManager {
 			retn = client.get(key);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-    		log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+    		log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (TimeoutException e) {
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("¶ÁÈ¡Êý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		return retn;
 	}
@@ -128,13 +103,10 @@ public class CacheClientManager {
 			client.deleteWithNoReply(key);
 		}
 		catch (MemcachedException e) {
-//    		e.printStackTrace();
-			log.error("É¾³ýÊý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}
 		catch (InterruptedException e) {
-			// ignore
-//			e.printStackTrace();
-			log.error("É¾³ýÊý¾Ýkey:"+key+"Òì³£ÁË:"+e);
+			log.error("É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½key:"+key+"ï¿½ì³£ï¿½ï¿½:"+e);
 		}	
 	}
 	
@@ -146,8 +118,7 @@ public class CacheClientManager {
 		}
 		catch(Exception e)
 		{
-//			e.printStackTrace();
-			log.error("shutdownÒì³£ÁË:"+e);
+			log.error("shutdownï¿½ì³£ï¿½ï¿½:"+e);
 		}
 	}
 }

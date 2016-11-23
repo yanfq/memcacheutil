@@ -1,4 +1,4 @@
-package com.hundsun.u3c.memcacheutil;
+package com.yfq.memcacheutil;
 
 import java.io.IOException;
 import java.util.Collection;
@@ -9,7 +9,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hundsun.u3c.util.Tools;
+import com.yfq.util.Tools;
 
 import net.rubyeye.xmemcached.MemcachedClient;
 import net.rubyeye.xmemcached.MemcachedClientBuilder;

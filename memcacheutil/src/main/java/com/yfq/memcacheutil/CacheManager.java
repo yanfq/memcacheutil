@@ -1,13 +1,13 @@
-package com.hundsun.u3c.memcacheutil;
+package com.yfq.memcacheutil;
 
 import java.util.Map;
 
+import com.yfq.util.Tools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.hundsun.u3c.commonutil.interfaceutil.InterfaceManager;
 import com.hundsun.u3c.commonutil.jobidutil.JobIdManager;
-import com.hundsun.u3c.util.Tools;
 
 import net.rubyeye.xmemcached.MemcachedClient;
 
@@ -174,14 +174,14 @@ public class CacheManager {
 		String cachedIp = JobIdManager.getIpByJobId(jobId);
 		log.debug("job id: "+jobId+" key: "+key+" value: "+value);
 		log.debug("last data in "+cachedIp);
-		log.debug("getUrls "+com.hundsun.u3c.util.Tools.getUrls());
+		log.debug("getUrls "+ Tools.getUrls());
 		MemcachedClient client = null;
 		client=CacheClientFactory.getClientByHost(cachedIp);
 		
 		if(client==null){
 			String[] urls=null;
 			try {
-				urls = com.hundsun.u3c.util.Tools.getOriginalUrls();
+				urls = Tools.getOriginalUrls();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -1,15 +1,12 @@
-package com.hundsun.u3c.util;
+package com.yfq.util;
 
-import java.util.Arrays;
-
+import com.hundsun.u3c.commonutil.interfaceutil.InterfaceManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.hundsun.u3c.commonutil.interfaceutil.InterfaceManager;
-
 public class Tools {
 	
-	//Ôö¼ÓÊÇ·ñ¶ÁÅäÖÃµÄ¿ª¹Ø£¬Ä¬ÈÏ¹Ø±Õ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ÃµÄ¿ï¿½ï¿½Ø£ï¿½Ä¬ï¿½Ï¹Ø±ï¿½
 	private static boolean isReadConfig = false;
 	
 	private static Logger log = LoggerFactory.getLogger("publicLog");
@@ -130,7 +127,7 @@ public class Tools {
 	
 	
 	/**
-	 * »ñÈ¡MemcacheUrl
+	 * ï¿½ï¿½È¡MemcacheUrl
 	 * @return
 	 */
 	public static String [] getOriginalUrls() throws Exception{
